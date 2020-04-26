@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UpdateActivity">
+
+    <TextView
+        android:id="@+id/text_title3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="#000"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:text="Form Edit Data Mahasiswa"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:textSize="7pt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/txtnimedit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="NIM"
+        android:textSize="8pt"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/text_title3"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="10dp"/>
+
+    <EditText
+        android:id="@+id/nimedit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="70dp"
+        android:layout_marginRight="20dp"
+        android:textSize="7pt"
+        android:hint="Masukkan Nim Anda"/>
+
+    <TextView
+        android:id="@+id/txtnamaedit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nama"
+        android:textSize="8pt"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/nimedit"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="5dp"/>
+
+    <EditText
+        android:id="@+id/namaedit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:textSize="7pt"
+        app:layout_constraintTop_toBottomOf="@+id/txtnamaedit"
+        android:layout_marginTop="6dp"
+        android:layout_marginRight="20dp"
+        android:hint="Masukkan Nama Anda"/>
+
+    <TextView
+        android:id="@+id/txtalamatedit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Alamat"
+        android:textSize="8pt"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/namaedit"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="5dp"/>
+
+    <EditText
+        android:id="@+id/alamatedit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:textSize="7pt"
+        app:layout_constraintTop_toBottomOf="@+id/txtalamatedit"
+        android:layout_marginTop="6dp"
+        android:layout_marginRight="20dp"
+        android:hint="Masukkan Alamat Anda"/>
+
+    <TextView
+        android:id="@+id/txtjkedit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Jenis Kelamin"
+        android:textSize="8pt"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/alamatedit"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="5dp"/>
+
+    <EditText
+        android:id="@+id/jkedit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/txtjkedit"
+        android:layout_marginTop="10dp"
+        android:textSize="7pt"
+        android:layout_marginRight="20dp"
+        android:hint="Masukkan Jenis kelamin Anda"/>
+
+    <TextView
+        android:id="@+id/txtnotelpedit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nomor Telepon"
+        android:textSize="8pt"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/jkedit"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="5dp"/>
+
+    <EditText
+        android:id="@+id/notelpedit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/txtnotelpedit"
+        android:layout_marginTop="10dp"
+        android:textSize="7pt"
+        android:layout_marginRight="20dp"
+        android:hint="Masukkan Nomor Telepon Anda"/>
+
+    <Button
+        android:id="@+id/btnupdate"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:textSize="8pt"
+        app:layout_constraintTop_toBottomOf="@+id/notelpedit"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="10dp"
+        android:text="UPDATE"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

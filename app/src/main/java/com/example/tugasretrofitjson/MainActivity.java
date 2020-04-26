@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         textViewResult = findViewById(R.id.text_title);
 
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://retrofitliviana.000webhostapp.com/Api/")
+                .baseUrl("http://192.168.1.5/retrofit/api/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 
@@ -42,20 +42,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call<List<Post>> call, Response<List<Post>> response) {
                 generateDataList(response.body());
-                //if (!response.isSuccessful()){
-                //    textViewResult.setText("Code "+response.code());
-                //    return;
-                //}
-                //List<Post> posts=response.body();
-                //String content="";
-                //for (Post post:posts){
-
-                 //   content+="ID Siswa :"+post.getId_siswa()+"\n";
-                 //   content+="Nama :"+post.getNama()+"\n";
-                 //   content+="Alamat :"+post.getAlamat()+"\n";
-                 //   content+="Jenis Kelamin :"+post.getJenis_kelamin()+"\n";
-                 //   content+="No Telp. :"+post.getNo_telp()+"\n\n";
-                //}
             }
 
             @Override

@@ -9,6 +9,8 @@ import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
+import retrofit2.http.PUT;
+import retrofit2.http.Path;
 import retrofit2.http.Query;
 
 public interface JsonPlaceHolderAPI {
@@ -24,5 +26,15 @@ public interface JsonPlaceHolderAPI {
       @Field("alamat") String alamat,
       @Field("jenis_kelamin") String jenis_kelamin,
       @Field("no_telp") String no_telp
+    );
+
+    @FormUrlEncoded
+    @PUT("siswa")
+    Call<ResponseBody> updateDataMhs(
+            @Field("id_siswa") String id_siswa,
+            @Field("nama") String nama,
+            @Field("alamat") String alamat,
+            @Field("jenis_kelamin") String jenis_kelamin,
+            @Field("no_telp") String no_telp
     );
 }

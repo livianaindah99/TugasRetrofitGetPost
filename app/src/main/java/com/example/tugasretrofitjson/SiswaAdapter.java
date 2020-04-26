@@ -1,6 +1,8 @@
 package com.example.tugasretrofitjson;
 
 import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -36,7 +38,7 @@ public class SiswaAdapter extends RecyclerView.Adapter<SiswaAdapter.ViewHolder> 
     }
 
     @Override
-    public void onBindViewHolder(@NonNull SiswaAdapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull SiswaAdapter.ViewHolder holder, final int position) {
         final Post ssw = dataSiswa.get(position);
 
         TextView textView = holder.IdsswTextView;
@@ -50,6 +52,20 @@ public class SiswaAdapter extends RecyclerView.Adapter<SiswaAdapter.ViewHolder> 
         textView2.setText(ssw.getAlamat());
         textView3.setText(ssw.getJenis_kelamin());
         textView4.setText(ssw.getNo_telp());
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Mengirimkan data ke activity update
+                Intent mIntent = new Intent(v.getContext(), UpdateActivity.class);
+                mIntent.putExtra("Nim", dataSiswa.get(position).getId_siswa());
+                mIntent.putExtra("Nama", dataSiswa.get(position).getNama());
+                mIntent.putExtra("Alamat", dataSiswa.get(position).getAlamat());
+                mIntent.putExtra("Jenis Kelamin", dataSiswa.get(position).getJenis_kelamin());
+                mIntent.putExtra("No Telp", dataSiswa.get(position).getNo_telp());
+                v.getContext().startActivity(mIntent);
+            }
+        });
     }
 
     @Override

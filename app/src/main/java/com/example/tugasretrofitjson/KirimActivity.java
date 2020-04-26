@@ -65,7 +65,7 @@ public class KirimActivity extends AppCompatActivity {
 
         //inisialisasi retrofit dan api interface untuk mengirimkan variabel2nya
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://retrofitliviana.000webhostapp.com/Api/")
+                .baseUrl("http://192.168.1.5/retrofit/api/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 
